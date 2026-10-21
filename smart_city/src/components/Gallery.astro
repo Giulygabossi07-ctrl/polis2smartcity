@@ -6,18 +6,11 @@ import { i } from '../data/i18n';
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <div class="section-tag" {...i('La città in immagini', 'Gallery')}>La città in immagini</div>
-        <h2 {...i('Foto', 'Photos')}>foto</h2>
+        <div class="section-tag" {...i('Chi siamo', 'Who we are')}>Chi siamo</div>
+        <h2 {...i('Work in progress', 'Work in progress')}>Work in progress</h2>
       </div>
-      <p class="desc">foto</p>
+      <p class="desc">Tutti gli studenti e professori che lavorano per realizzare il progetto.</p>
     </div>
-    <div class="gal-grid">
-      {gallery.map((g) => (
-        <div class="gal-item reveal">
-          <img src={g.src} alt={g.alt} loading="lazy" />
-          <div class="gal-cap" {...(g.cap.en ? i(g.cap.it, g.cap.en) : {})}>{g.cap.it}</div>
-        </div>
-      ))}
-    </div>
+    <img src="/images/fotodigruppo.jpeg" alt="Chi siamo" />
   </div>
 </section>

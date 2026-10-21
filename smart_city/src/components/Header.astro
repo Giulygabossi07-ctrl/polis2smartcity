@@ -13,7 +13,10 @@ import { i } from '../data/i18n';
       <a href="/#noi" {...i('La scuola', 'Our School')}>La scuola</a>
       <div class="dropdown">
         <a href="#percorso"><span {...i('Progetto', 'Project')}>Progetto</span> ▾</a>
-        <div class="dropdown-content"><a href="/agenda2030/">Agenda 2030</a></div>
+        <div class="dropdown-content">
+        <a href="/agenda2030/">Agenda 2030</a>
+        <a href="/diario-di-bordo/">Diario di Bordo</a>
+      </div>
       </div>
       <div class="dropdown">
         <a href="#gruppi"><span {...i('Teams', 'Teams')}>Teams</span> ▾</a>
@@ -21,8 +24,8 @@ import { i } from '../data/i18n';
           {teams.map((t) => <a href={t.href} {...i(t.menu.it, t.menu.en)}>{t.menu.it}</a>)}
         </div>
       </div>
-      <a href="#galleria" {...i('Galleria', 'Gallery')}>Galleria</a>
-      <a href="#confronto" {...i('Risorse', 'Resources')}>Risorse</a>
+      <a href="#galleria" {...i('Chi siamo', 'Who we are')}>Chi siamo</a>
+      <a href="#confronto" {...i('Dashboard', 'Dashboard')}>Dashboard</a>
       <a href="#aziende" {...i('Partners', 'Partners')}>Partners</a>
     </nav>
 

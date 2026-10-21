@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/diario-di-bordo.css';
+---
+
+<Layout
+  title="Diario di Bordo | Dalla Polis alla Smart City"
+  description="Il nostrodiario di bordo documenta le fasi di sviluppo, le sfide affrontate e i progressi compiuti nel percorso verso la realizzazione di una città intelligente."
+>
+  <Header />
+
+  <main id="contenuto">
+    <section class="page-hero-diario-di-bordo">
+      <div class="wrap">
+        <h1>Diario di Bordo</h1>
+        <p>
+          Il nostro diario di bordo il quale documenta le fasi di sviluppo, le sfide affrontate e i progressi compiuti
+          nel percorso verso la realizzazione di una città intelligente. 
+        </p>
+      </div>
+    </section>
+
+    <section class="sdg-section">
+      <div class="wrap">
+        <h2 class="sdg-section-title">Work in Progress</h2>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
