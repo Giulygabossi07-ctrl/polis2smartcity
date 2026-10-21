@@ -1,0 +1,10 @@
+---
+import { marquee } from '../data/site';
+import { i } from '../data/i18n';
+const loop = [...marquee, ...marquee]; // due copie per lo scorrimento infinito (-50%)
+---
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {loop.map((m) => <span {...i(m.it, m.en)}>{m.it}</span>)}
+  </div>
+</div>

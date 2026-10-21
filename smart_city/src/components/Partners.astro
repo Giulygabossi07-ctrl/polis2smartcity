@@ -1,0 +1,16 @@
+---
+import { partners } from '../data/site';
+import { i } from '../data/i18n';
+---
+<section class="partners-section" id="aziende">
+  <div class="wrap">
+    <h2 class="partners-title" {...i('I nostri partners', 'Our Partners')}>I nostri partners</h2>
+    <div class="partners-grid">
+      {partners.map((p) => (
+        <div class:list={['partner-item', { 'partner-main': p.main }]}>
+          <img src={`/images/${p.src}`} alt={p.alt} loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

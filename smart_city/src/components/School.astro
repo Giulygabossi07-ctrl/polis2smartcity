@@ -1,0 +1,43 @@
+---
+import { i } from '../data/i18n';
+const desc = "Radicati nel cuore del tessuto industriale bresciano, viviamo la nostra scuola come un vero e proprio laboratorio di innovazione in costante dialogo con il territorio. Attraverso una stretta sinergia con aziende, enti e università, trasformiamo le sfide del mondo produttivo in opportunità concrete per il nostro futuro. Tra laboratori all'avanguardia e progetti tecnologici di impatto reale, ci formiamo per diventare i professionisti di domani, pronti a contribuire attivamente allo sviluppo tecnologico della nostra città.";
+const about = "L'Istituto Tecnico Benedetto Castelli di Brescia è una delle istituzioni educative più prestigiose e storiche della provincia. Fondato nel 1839 da Gabriele Rottini come scuola di pittura, l'istituto ha subito una significativa evoluzione nel corso degli anni, diventando un centro di eccellenza per l'istruzione tecnica e industriale. L'istituto copre un'area di 11.000 metri quadrati, offrendo un ambiente stimolante dotato di tecnologie all'avanguardia. Le numerose aule, laboratori e strutture sportive sono progettate per supportare un'istruzione completa e moderna. La scuola offre una vasta gamma di specializzazioni, tra cui meccanica e meccatronica, energia, ingegneria elettrica, elettronica, automazione, chimica, informatica e telecomunicazioni.";
+---
+<section class="concept" id="noi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-tag" {...i('La nostra scuola', 'Our School')}>La nostra scuola</div>
+        <h2 {...i('La nostra scuola:', 'Our School:')}>La nostra scuola:</h2>
+        <h2>I.I.S. Castelli di Brescia</h2>
+      </div>
+      <p class="desc" {...i(desc, "Deeply rooted in Brescia's industrial heart, we experience our school as a true innovation laboratory in continuous dialogue with the territory. Through close synergy with companies, entities, and universities, we transform product challenges into concrete opportunities for our future.")}>"{desc}"</p>
+    </div>
+
+    <div class="concept-grid">
+      <div class="concept-photo reveal">
+        <div class="carousel-track">
+          <img src="/images/ITIS1.JPEG" alt="scuola1" loading="lazy" />
+          <img src="/images/itis2.jpeg" alt="scuola2" loading="lazy" />
+          <img src="/images/itis3.jpeg" alt="scuola3" loading="lazy" />
+          <video id="carosello-video" autoplay muted loop playsinline>
+            <source src="/images/itisvideo.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="concept-chip"><span class="sw"></span> <span {...i('I.I.S. B.Castelli: il nostro istituto', 'I.I.S. B.Castelli: Our Campus')}>I.I.S. B.Castelli: il nostro istituto</span></div>
+      </div>
+
+      <div class="concept-list">
+        <div class="concept-row reveal">
+          <span class="mk">
+            <img src="/images/logoscuola.png" alt="logoscuola" width="100" height="50" style="float:right; margin-right:5px;" />
+          </span>
+          <div>
+            <h3 {...i('La nostra scuola', 'Our School')}>La nostra scuola</h3>
+            <p {...i(about, 'The Benedetto Castelli Technical Institute of Brescia is one of the most prestigious technical schools in the province. Founded in 1839, the institute covers over 11,000 square meters, offering a stimulating environment equipped with state-of-the-art technologies and core specializations in computer science, robotics, electronics, automation, and telecommunications.')}>{about}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { timeline } from '../data/site';
+import { i } from '../data/i18n';
+---
+<section class="timeline" id="percorso">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-tag" {...i('Il nostro progetto', 'Our Roadmap')}>Il nostro progetto</div>
+        <h2 {...i('Le tappe del nostro progetto', 'Project Milestones')}>Le tappe del nostro progetto</h2>
+      </div>
+      <p class="desc" {...i('Dalla formazione con le aziende alla realizzazione pratica: ecco il racconto del nostro progetto, un percorso di squadra tra tecnologia, automazione e sviluppo web.', 'From corporate training sessions to hands-on execution: the storyline of our team project.')}>Dalla formazione con le aziende alla realizzazione pratica: ecco il racconto del nostro progetto, un percorso di squadra tra tecnologia, automazione e sviluppo web.</p>
+    </div>
+
+    <div class="tl-track">
+      {timeline.map((s) => (
+        <div class="tl-item">
+          <div class="tl-node" style={`--c:${s.color}`}></div>
+          <div class="tl-card reveal" style={`--c:${s.color}`}>
+            <span class="tl-era" {...i(s.era.it, s.era.en)}>{s.era.it}</span>
+            <h3 {...i(s.title.it, s.title.en)}>{s.title.it}</h3>
+            <p {...i(s.text.it, s.text.en)}>{s.text.it}</p>
+          </div>
+          <div class="tl-spacer"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

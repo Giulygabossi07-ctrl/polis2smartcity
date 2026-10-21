@@ -1,0 +1,88 @@
+---
+import { teams } from '../data/site';
+import { i } from '../data/i18n';
+---
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brand" href="/">
+      <img src="/images/logodefinitivo.png" alt="logo" width="70" height="70" style="object-fit: contain;" />
+      <span {...i('Dalla Pólis alla Smart City', 'From Polis to Smart City')}>Dalla Pólis alla Smart City</span>
+    </a>
+
+    <nav class="links" aria-label="Navigazione principale">
+      <a href="/#noi" {...i('La scuola', 'Our School')}>La scuola</a>
+      <div class="dropdown">
+        <a href="#percorso"><span {...i('Progetto', 'Project')}>Progetto</span> ▾</a>
+        <div class="dropdown-content"><a href="/agenda2030/">Agenda 2030</a></div>
+      </div>
+      <div class="dropdown">
+        <a href="#gruppi"><span {...i('Teams', 'Teams')}>Teams</span> ▾</a>
+        <div class="dropdown-content">
+          {teams.map((t) => <a href={t.href} {...i(t.menu.it, t.menu.en)}>{t.menu.it}</a>)}
+        </div>
+      </div>
+      <a href="#galleria" {...i('Galleria', 'Gallery')}>Galleria</a>
+      <a href="#confronto" {...i('Risorse', 'Resources')}>Risorse</a>
+      <a href="#aziende" {...i('Partners', 'Partners')}>Partners</a>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:30px; flex-shrink:0; white-space:nowrap;">
+      <a class="nav-cta" href="#contatti" {...i('Contatti', 'Contacts')}>Contatti</a>
+      <img src="/images/patrocinio.png" alt="patrocinio" height="90" style="object-fit:contain; max-width:140px;" />
+      <img src="/images/logoscuola.png" alt="logoscuola" width="70" height="70" style="object-fit:contain;" />
+      
+      <!-- IL TUO PULSANTE DI TRADUZIONE -->
+      <button id="lang-toggle" style="background:none; border:none; padding:0; cursor:pointer; display:flex; align-items:center; margin-top:8px;">
+        <img id="lang-flag" src="/images/english.jpg" alt="Cambia Lingua" style="width:45px; height:30px; border-radius:3px;" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- SCRIPT CHE USA I TUOI FILE PER TRADURRE ALL'ISTANTE -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('lang-toggle');
+    const flagImg = document.getElementById('lang-flag');
+
+    // Legge la lingua salvata sul browser dell'utente (di base l'italiano)
+    let currentLang = localStorage.getItem('site_lang') || 'it';
+
+    // Funzione che cambia tutte le scritte
+    function applyTranslations(lang) {
+      // 1. Trova tutti gli elementi HTML che hanno la tua funzione {...i(...)}
+      const elements = document.querySelectorAll('[data-it]');
+      
+      // 2. Sostituisce il testo con quello della lingua scelta
+      elements.forEach(el => {
+        const newText = el.getAttribute(`data-${lang}`);
+        if (newText) {
+          el.textContent = newText;
+        }
+      });
+
+      // 3. Cambia l'immagine della bandiera
+      if (flagImg) {
+        // Se è in inglese mostra la bandiera italiana (se la possiedi) altrimenti lascia l'inglese
+        flagImg.src = lang === 'en' ? '/images/italia.jpg' : '/images/english.jpg';
+      }
+    }
+
+    // Applica le traduzioni subito appena la pagina si apre
+    applyTranslations(currentLang);
+
+    // Quando clicchi il pulsante, inverte la lingua
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Se è italiano diventa inglese, e viceversa
+      currentLang = currentLang === 'it' ? 'en' : 'it';
+      
+      // Salva la scelta così se naviga in altre pagine rimane tradotto
+      localStorage.setItem('site_lang', currentLang);
+      
+      // Applica la traduzione istantaneamente
+      applyTranslations(currentLang);
+    });
+  });
+</script>

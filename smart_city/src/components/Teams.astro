@@ -1,0 +1,26 @@
+---
+import { teams } from '../data/site';
+import { i } from '../data/i18n';
+---
+<section class="pillars" id="gruppi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-tag" {...i('I gruppi di lavoro', 'Workgroups')}>I gruppi di lavoro</div>
+        <h2 {...i('Una città, sei competenze', 'Six Core Teams:')}>Una città, sei competenze</h2>
+      </div>
+      <p class="desc" {...i('Per costruire una Smart City non basta una sola competenza. Il progetto nasce dalla collaborazione tra sei gruppi di studenti, ciascuno impegnato in una parte del sistema.', 'Building the smart city through 6 specialized technical teams:')}>Per costruire una Smart City non basta una sola competenza. Il progetto nasce dalla collaborazione tra sei gruppi di studenti, ciascuno impegnato in una parte del sistema.</p>
+    </div>
+
+    <div class="pillar-grid">
+      {teams.map((t) => (
+        <div class={`pillar-card ${t.cls} reveal`}>
+          <span class="pillar-num">{t.n}</span>
+          <h3><a href={t.href} {...i(t.title.it, t.title.en)}>{t.title.it}</a></h3>
+          <p>{t.text}</p>
+          <a href={t.href} class="pillar-card-link" {...i('Scopri il gruppo →', 'Discover Team →')}>Scopri il gruppo →</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

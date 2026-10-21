@@ -1,0 +1,28 @@
+---
+import { i } from '../data/i18n';
+const lead = 'Il progetto prevede la realizzazione di un plastico urbano rappresentativo di una porzione significativa della città di Brescia, realizzato mediante tecnologie di stampa 3D di ultima generazione.';
+---
+<section class="hero" id="top" style="padding:0;">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1715276611597-048987ab7d97?auto=format&fit=crop&w=2400&q=70"
+         alt="Vista aerea notturna di una città contemporanea, scie luminose di traffico e grattacieli" loading="eager" />
+  </div>
+
+  <div class="wrap hero-inner">
+    <h1>
+      <span {...i('Dalla', 'From')}>Dalla</span> <em>Pólis</em> <span {...i('alla Smart City', 'to Smart City')}>alla Smart City</span>
+    </h1>
+    <p class="lead" {...i(lead, 'The project involves creating a representative urban scale model of a significant area of Brescia, built using state-of-the-art 3D printing technologies.')}>{lead}</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#noi" {...i('Scopri la nostra scuola', 'Discover Our School')}>Scopri la nostra scuola</a>
+      <a class="btn-ghost" href="#gruppi" {...i('Scopri il nostro lavoro', 'Discover Our Work')}>Scopri il nostro lavoro</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span></span><span {...i('Scorri', 'Scroll')}>Scorri</span></div>
+
+  <div class="patrocinio-box reveal">
+    <p {...i('Realizzato con il patrocinio del Comune di Brescia', 'Under the patronage of the Municipality of Brescia')}>Realizzato con il patrocinio del Comune di Brescia</p>
+    <img src="/images/patrociniointero-removebg-preview.png" alt="Patrocinio Comune di Brescia" />
+  </div>
+</section>

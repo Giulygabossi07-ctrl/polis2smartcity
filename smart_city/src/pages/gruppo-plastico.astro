@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/gruppo-plastico.css';
+---
+
+<Layout title="Progettazione Plastico | Dalla Polis alla Smart City" description="Approfondimento sul gruppo Progettazione Plastico del progetto Dalla Polis alla Smart City.">
+  <Header />
+  <main>
+<!-- BANNER TOP GRUPPO -->
+<section class="page-hero-plastico">
+<div class="wrap">
+<h1 data-en="Scale Model Design Team" data-it="Gruppo Progettazione Plastico">Gruppo Progettazione Plastico</h1>
+<p data-en="3D Modeling -&gt; city buildings." data-it="Modellazione 3D -&gt; edifici della città.">Modellazione 3D -&gt; edifici della città.</p>
+</div>
+</section>
+<!-- CONTENUTO DETTAGLIATO -->
+<section class="team-content">
+<div class="wrap content-grid">
+<div class="description-block">
+<h2 data-en="Team Goals and Activities" data-it="Obiettivi e Attività del Team">Obiettivi e Attività del Team</h2>
+<p data-en="Scale Model Design Team: Following the analysis of the 3D models related to most of the planned buildings, the group highlighted several operational issues. Many of the retrieved files are unsuitable for 3D printing, as they consist solely of graphic surfaces (textures/images) lacking the necessary solid geometry. To overcome this problem, the use of software capable of converting these surface models into printable volumes will be evaluated first; alternatively, 3D modeling from scratch of the affected structures will be carried out." data-it="Gruppo Progettazione Plastico: A seguito dell'analisi dei modelli 3D relativi alla maggior parte degli edifici previsti, il gruppo ha evidenziato diverse criticità operative. Molti dei file reperiti risultano inadatti alla stampa 3D, in quanto costituiti unicamente da superfici grafiche (texture/immagini) prive della necessaria geometria solida. Per ovviare a questo problema, si valuterà in prima istanza l'impiego di un software in grado di convertire tali modelli superficiali in volumi stampabili; in alternativa, si procederà con la modellazione 3D ex novo delle strutture interessate.">Gruppo Progettazione Plastico: A seguito dell'analisi dei modelli 3D relativi alla maggior parte degli edifici previsti, il gruppo ha evidenziato diverse criticità operative. Molti dei file reperiti risultano inadatti alla stampa 3D, in quanto costituiti unicamente da superfici grafiche (texture/immagini) prive della necessaria geometria solida. Per ovviare a questo problema, si valuterà in prima istanza l'impiego di un software in grado di convertire tali modelli superficiali in volumi stampabili; in alternativa, si procederà con la modellazione 3D ex novo delle strutture interessate.</p>
+<div class="tech-stack">
+<h3 data-en="Technical Specifications &amp; Components" data-it="Specifiche Tecniche &amp; Componenti">Specifiche Tecniche &amp; Componenti</h3>
+<ul>
+<li><span data-en="Network Architecture:" data-it="Architettura di Rete:">Architettura di Rete:</span> <strong>MQTT / LoRaWAN</strong></li>
+<li><span data-en="Microcontrollers:" data-it="Microcontrollori:">Microcontrollori:</span> <strong>ESP32 / Arduino Mega / Arduino MKR1010</strong></li>
+<li><span data-en="Programming Languages:" data-it="Linguaggi di Programmazione:">Linguaggi di Programmazione:</span> <strong>C++ / Python</strong></li>
+<li><span data-en="Cloud Integration:" data-it="Integrazione Cloud:">Integrazione Cloud:</span> <strong>Dashboard Web &amp; Database SQL</strong></li>
+</ul>
+</div>
+</div>
+<div class="team-gallery-grid">
+<div class="gallery-card">
+<img alt="Fase di testing dei moduli IoT" loading="lazy" src="/images/plastico7.jpeg"/>
+<div class="caption" data-en="2D model development" data-it="Sviluppo del modello 2D">Sviluppo del modello 2D</div>
+</div>
+<div class="carousel-item" style="width: 100%;">
+<video autoplay="" loop="" muted="" playsinline="" style="width: 100%; height: 100%; object-fit: cover;">
+<source src="/images/3d plastico.mp4" type="video/mp4"/>
+           Il tuo browser non supporta il tag video.
+          </video>
+<div class="item-caption" data-en="3D simulation of the project" data-it="Simulazione 3D del progetto">Simulazione 3D del progetto</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CAROSELLO FOTO ORIZZONTALE IN FONDO -->
+<section class="carousel-section">
+<div class="wrap">
+<h2 data-en="Team Photo Gallery" data-it="Galleria Fotografica del Team">Galleria Fotografica del Team</h2>
+<div class="horizontal-carousel">
+<div class="carousel-item">
+<img alt="Laboratorio di elettronica" loading="lazy" src="/images/plastico2.jpeg"/>
+<div class="item-caption" data-en="First 3D print" data-it="Prima stampa 3D">Prima stampa 3D</div>
+</div>
+<div class="carousel-item">
+<img alt="Codice e programmazione" loading="lazy" src="/images/plastico3.jpeg"/>
+<div class="item-caption" data-en="Study of 3D printers" data-it="Studio delle stampanti 3D">Studio delle stampanti 3D</div>
+</div>
+<div class="carousel-item">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="/images/plastico4.mp4" type="video/mp4"/>
+           Il tuo browser non supporta il tag video.
+          </video>
+<div class="item-caption" data-en="Study of 3D printers" data-it="Studio delle stampanti 3D">Studio delle stampanti 3D</div>
+</div>
+<div class="carousel-item">
+<img alt="Riunione di coordinamento" loading="lazy" src="/images/plastico5.jpeg"/>
+<div class="item-caption" data-en="Assembly of 3D printers" data-it="Montaggio delle stampanti 3D">Montaggio delle stampanti 3D</div>
+</div>
+<div class="carousel-item">
+<img alt="Presentazione del progetto" loading="lazy" src="/images/plastico6.jpeg"/>
+<div class="item-caption" data-en="Work distribution" data-it="Distribuzione del lavoro">Distribuzione del lavoro</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+  <Footer />
+</Layout>

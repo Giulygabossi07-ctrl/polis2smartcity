@@ -1,0 +1,22 @@
+---
+import { i } from '../data/i18n';
+---
+<section class="cta" id="contatti">
+  <div class="cta-media">
+    <img src="/images/sfondo.avif" alt="" role="presentation" loading="lazy" />
+  </div>
+  <div class="wrap cta-inner">
+    <div class="reveal">
+      <h2 {...i('Costruiamo insieme la nostra polis', "Let's build our smart city together")}>Costruiamo insieme la nostra polis</h2>
+      <p {...i('Ricevi aggiornamenti sul progetto, sugli incontri pubblici e sulle occasioni di partecipazione: il percorso dalla polis alla smart city si scrive anche con il tuo contributo.', 'Stay updated on project news, public events, and community opportunities.')}>Ricevi aggiornamenti sul progetto, sugli incontri pubblici e sulle occasioni di partecipazione: il percorso dalla polis alla smart city si scrive anche con il tuo contributo.</p>
+    </div>
+    <div class="reveal">
+      <form class="subscribe" action="#" method="post">
+        <label for="email" style="position:absolute; left:-9999px;">Indirizzo email</label>
+        <input id="email" type="email" placeholder="La tua email" required />
+        <button type="submit" {...i('Iscriviti', 'Subscribe')}>Iscriviti</button>
+      </form>
+      <div class="cta-note" {...i('Nessuno spam: solo aggiornamenti sul progetto.', 'No spam: project updates only.')}>Nessuno spam: solo aggiornamenti sul progetto.</div>
+    </div>
+  </div>
+</section>
