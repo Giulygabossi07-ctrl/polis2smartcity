@@ -6,3 +6,4 @@ export default defineConfig({
   site: 'https://Giulygabossi07-ctrl.github.io',
   base: '/polis2smartcity/',
 });
+
