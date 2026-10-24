@@ -1,8 +1,9 @@
-name: Deploy Astro to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,31 +17,30 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./smart_city
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
+          cache: 'npm'
 
-      - name: Install Yarn
-        run: corepack enable
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: yarn install --ignore-engines
+        run: npm install
 
       - name: Build with Astro
-        run: yarn build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./smart_city/dist
+          path: ./dist
 
   deploy:
     environment:
@@ -52,5 +52,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
+
 
         
