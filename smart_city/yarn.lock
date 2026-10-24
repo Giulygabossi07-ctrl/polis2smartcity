@@ -1404,7 +1404,7 @@ iron-webcrypto@^1.2.1:
 is-docker@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-4.0.0.tgz#6aab87c77a30ddff39c460af372ee1795aee7848"
-  integrity sha512-LHE+wROyG/Y/0ZnbktRCoTix2c1RhgWaZraMZ8o1Q7zCh0VSrICJQO5oqIIISrcSBtrXv0o233w1IYwsWCjTzA==
+  integrity sha512-LHE+wROyG/Y/0ZnbktRCoTix2c1RhgWaZraMZ8o1Q7zCh0VSrICJQO5oqIII/polis2smartcity/SBtrXv0o233w1IYwsWCjTzA==
 
 is-plain-obj@^4.0.0:
   version "4.1.0"

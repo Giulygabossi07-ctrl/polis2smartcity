@@ -67,25 +67,25 @@ export const timeline = [
 ];
 
 export const gallery = [
-  { src: '/images/AUTO7.jpeg', alt: 'Colonne del Partenone, Atene', cap: { it: "Il Partenone, Atene — l'agorà classica" } },
-  { src: '/images/fotodigruppo.jpeg', alt: 'Il nostro gruppo di lavoro', cap: { it: 'Il nostro gruppo di lavoro', en: 'Our Student Team' } },
-  { src: '/images/IOT7.jpeg', alt: 'Rovine di un tempio greco al tramonto', cap: { it: 'Rovine ad Atene' } },
-  { src: '/images/plastico6.jpeg', alt: 'Vista aerea di una città moderna di notte', cap: { it: 'Skyline notturno' } },
+  { /polis2smartcity/: '/images/AUTO7.jpeg', alt: 'Colonne del Partenone, Atene', cap: { it: "Il Partenone, Atene — l'agorà classica" } },
+  { /polis2smartcity/: '/images/fotodigruppo.jpeg', alt: 'Il nostro gruppo di lavoro', cap: { it: 'Il nostro gruppo di lavoro', en: 'Our Student Team' } },
+  { /polis2smartcity/: '/images/IOT7.jpeg', alt: 'Rovine di un tempio greco al tramonto', cap: { it: 'Rovine ad Atene' } },
+  { /polis2smartcity/: '/images/plastico6.jpeg', alt: 'Vista aerea di una città moderna di notte', cap: { it: 'Skyline notturno' } },
 ];
 
 // Segnaposto della sezione "Risorse": sostituiscili con i contenuti reali
 export const resources = [['...', '...'], ['....', '...'], ['...', '...'], ['...', '...'], ['...', '...']];
 
 export const partners = [
-  { src: 'artigiani%20(1).png', alt: 'Associazione Artigiani' },
-  { src: 'bonera.png', alt: 'Gruppo Bonera' },
-  { src: 'bresciamobilita-removebg-preview.png', alt: 'Brescia Mobilità', main: true },
-  { src: 'cembre-removebg-preview.png', alt: 'Cembre' },
-  { src: 'tecnosens_LP-removebg-preview.png', alt: 'Tecnosens' },
-  { src: 'LogoFondazioneCastelli-3d637956.png', alt: 'Fondazione Castelli' },
-  { src: 'patrocinio.png', alt: 'Patrocinio' },
-  { src: 'duferconl.png', alt: 'Duferco', main: true },
-  { src: 'senini-removebg-preview.png', alt: 'Senini' },
-  { src: 'techne.png', alt: 'Techne' },
-  { src: 'Logo-Busigroup-Service_colori.png', alt: 'Busi Group' },
+  { /polis2smartcity/: 'artigiani%20(1).png', alt: 'Associazione Artigiani' },
+  { /polis2smartcity/: 'bonera.png', alt: 'Gruppo Bonera' },
+  { /polis2smartcity/: 'bresciamobilita-removebg-preview.png', alt: 'Brescia Mobilità', main: true },
+  { /polis2smartcity/: 'cembre-removebg-preview.png', alt: 'Cembre' },
+  { /polis2smartcity/: 'tecnosens_LP-removebg-preview.png', alt: 'Tecnosens' },
+  { /polis2smartcity/: 'LogoFondazioneCastelli-3d637956.png', alt: 'Fondazione Castelli' },
+  { /polis2smartcity/: 'patrocinio.png', alt: 'Patrocinio' },
+  { /polis2smartcity/: 'duferconl.png', alt: 'Duferco', main: true },
+  { /polis2smartcity/: 'senini-removebg-preview.png', alt: 'Senini' },
+  { /polis2smartcity/: 'techne.png', alt: 'Techne' },
+  { /polis2smartcity/: 'Logo-Busigroup-Service_colori.png', alt: 'Busi Group' },
 ];
